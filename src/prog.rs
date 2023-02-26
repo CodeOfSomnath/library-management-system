@@ -1,21 +1,17 @@
-//use arg::{get_args, Args};
-//use crate::Args;
 use std::vec::Vec;
 
-#[allow(dead_code)]
 #[derive(Debug)]
 pub struct Book {
     pub name: String,
     pub author: String,
 }
 
-#[allow(dead_code)]
 #[derive(Debug)]
 pub struct Library {
     pub books: Vec<Book>,
 }
 
-#[allow(dead_code)]
+// Here a new function is add
 impl Book {
     pub fn new(name: String, author: String) -> Self {
         Book {
@@ -25,14 +21,16 @@ impl Book {
     }
 }
 
-#[allow(dead_code)]
 impl Library {
+    // This function return a new instance
     pub fn new() -> Self {
         Library { books: Vec::new() }
     }
+    // This function return how many books in a library
     pub fn size(&self) -> u32 {
         self.books.len().try_into().unwrap()
     }
+    // This function add a book to Library
     pub fn add(&mut self, book: Book) {
         if book.name != "" || book.author != "" {
             self.books.push(book);
@@ -40,6 +38,7 @@ impl Library {
             println!("Either name or author something is missing.\nNothing to be add..")
         }
     }
+    // This function take a book name and author and return the book from library
     pub fn get(&mut self, book: Book) -> Book {
         let mut count = 0;
         for b in &self.books {
