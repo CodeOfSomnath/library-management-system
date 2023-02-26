@@ -1,5 +1,5 @@
 //use arg::{get_args, Args};
-use crate::Args;
+//use crate::Args;
 use std::vec::Vec;
 
 #[allow(dead_code)]
@@ -18,14 +18,6 @@ pub struct Library {
 #[allow(dead_code)]
 impl Book {
     pub fn new(name: String, author: String) -> Self {
-        Book {
-            name: name,
-            author: author,
-        }
-    }
-    pub fn from(args: &Args) -> Self {
-        let name: String = args.name.clone();
-        let author: String = args.author.clone();
         Book {
             name: name,
             author: author,
