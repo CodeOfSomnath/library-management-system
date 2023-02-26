@@ -2,7 +2,7 @@ mod parser;
 mod prog;
 use parser::*; // Here a simple user input parser
 use prog::*; // program main structure is here
-             // This is for checking which method is performed
+// This is for checking which method is performed
 enum Out {
     Get(Book),
     Err,
