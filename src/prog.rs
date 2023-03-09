@@ -42,7 +42,7 @@ impl Library {
     pub fn get(&mut self, book: Book) -> Book {
         let mut count = 0;
         for b in &self.books {
-            if book.name != b.name && book.author != b.author {
+            if book.name != b.name || book.author != b.author {
                 count = count + 1;
             } else {
                 break;
