@@ -21,8 +21,5 @@ pub fn input(prompt: &str) -> String {
 pub fn get_args() -> Args {
     let n = input("Enter book name: ");
     let a = input("Enter author name: ");
-    Args {
-        name: n,
-        author: a,
-    }
+    Args { name: n, author: a }
 }
