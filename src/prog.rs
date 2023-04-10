@@ -14,10 +14,7 @@ pub struct Library {
 // Here a new function is add
 impl Book {
     pub fn new(name: String, author: String) -> Self {
-        Book {
-            name: name,
-            author: author,
-        }
+        Book { name, author }
     }
 }
 
@@ -57,5 +54,9 @@ impl Library {
         } else {
             self.books.remove(count)
         }
+    }
+    // Removes unused memory of vector struct
+    pub fn fit(&mut self) {
+        self.books.shrink_to_fit();
     }
 }

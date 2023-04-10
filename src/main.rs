@@ -46,6 +46,7 @@ fn main() {
                 Out::Add => println!("Adding sucessful.."),
                 Out::Err => println!("Something wrong...."),
             }
+            lib.fit(); // memory cleaning
         } else {
             println!("Invalid option: '{}'", ex);
             show();
